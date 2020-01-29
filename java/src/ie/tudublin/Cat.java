@@ -13,8 +13,16 @@ public class Cat extends Animal
         return numLives;
     }
 
-    public void speak()
-    {
+    public void speak() {
         System.out.println("Meow!");
+    }
+
+    public void kill() {
+        this.setNumLives(this.numLives - 1);
+        if (this.numLives > 0) {
+            System.out.println("Ouch");
+        } else {
+            System.out.println("Dead");
+        }
     }
 }
