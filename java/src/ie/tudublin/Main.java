@@ -1,9 +1,7 @@
 package ie.tudublin;
 
-public class Main
-{
-    public static void main(String[] arg)
-    {
+public class Main {
+    public static void main(String[] arg) {
         System.out.println("Hello world!");
 
         Animal misty = new Dog(); // Polymorphism

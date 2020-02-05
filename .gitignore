@@ -22,3 +22,5 @@
 hs_err_pid*
 java/.idea/misc.xml
 *.xml
+java/.idea/*
+java/java.iml
