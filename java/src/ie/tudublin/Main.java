@@ -1,29 +1,14 @@
 package ie.tudublin;
 
-public class Main
-{
+public class Main {
 
-    public void helloProcessing()
-	{
+    public void bugZap() {
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new HelloProcessing());
+        processing.core.PApplet.runSketch( a, new BugZap());
 	}
     
-    public static void main(String[] arg)
-    {
-        /*
-        System.out.println("Hello world!");
-
-        Animal misty = new Dog(); // Polymorphism
-        misty.setName("Misty");
-        System.out.println(misty.getName());  
-        misty.speak();  
-        Cat topcat = new Cat();
-        topcat.speak();
-        */
-
+    public static void main(String[] arg) {
         Main main = new Main();
-		main.helloProcessing();
-        
+		main.bugZap();
     }
 }
