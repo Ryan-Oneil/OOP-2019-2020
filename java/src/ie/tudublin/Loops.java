@@ -2,94 +2,94 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 
-public class Loops extends PApplet {
-
-	private int sizeX = 500;
-	private int sizeY = 500;
-	private int centre = 250;
-
+public class Loops extends PApplet
+{
 	public void settings()
 	{
-		size(sizeX, sizeY);
+		size(500, 500);
 	}
 
-	public void setup() {
-//		colorMode(HSB);
-//		drawThirdPattern();
-		//drawRainbowCircle();
-		drawGrid();
+	public void setup()
+	{
+
 	}
 
-	public void draw() {
-		//drawFirstPattern();
-		//drawCircle();
-		//drawThirdPattern();
-		//drawGrid();
-	}
-
-	private void drawThirdPattern() {
-		int colorSelection = 0;
-
-		for (int i = 0; i <500; i+=50) {
-			fillNextColor(colorSelection++);
-			rect(i, 0, 50, sizeY);
+	public void loops1()
+	{
+		stroke(255);
+		int numLines = (int) (30 * (mouseX / (float) width)) ;
+		float gap = width / (float) numLines;
+		for(int i = 0 ; i <= numLines ; i ++)
+		{
+			float x = i * gap;
+			line(x, 0, width - x, height);
+			line(0, x, width, height -x);
 		}
 	}
 
-	private void drawRainbowCircle() {
-		int colorSelection = 0;
+	float offset = 0;
 
-		for (int i = 25; i <500; i+=50) {
-			fillNextColor(colorSelection++);
-			circle(i, centre, 50);
+	public void loops2()
+	{
+		int numCircles  = (int) (20 * (mouseX / (float) width)) ;
+
+		float w = width / (float) numCircles;
+		float radius = w / 2.0f;
+		colorMode(HSB);
+		float cGap = 255 / (float) (numCircles * numCircles);
+		noStroke();
+
+		for(int j = 0 ; j < numCircles ; j ++)
+		{
+			for(int i = 0 ; i < numCircles ; i ++)
+			{
+				float x = radius + (i * w);
+				float y = radius + (j * w);
+				float c = (cGap * i * j + offset) % 255;
+				fill(c, 255, 255);
+				ellipse(x, y, w, w);
+			}
 		}
+		offset += mouseY / 250.0f;
 	}
 
-	private void drawCircle() {
-		for (int i = 25; i < 500; i+= 50) {
-			circle(i, centre, 50);
-		}
-	}
-
-	public void drawFirstPattern() {
-		for (int i = 0; i < 520; i+= 20) {
-			line(centre, centre, i, 0);
-			line(centre, centre, 0, i);
-
-			line(centre, centre, 500, i);
-			line(centre, centre, i, 500);
-		}
-	}
-
-	public void drawGrid() {
-		background(0);
+	public void loops3()
+	{
 		float gap = width * 0.1f;
-		float textGap = gap / 2f;
+		float halfGap = gap / 2.0f;
+		colorMode(RGB);
 		stroke(0, 255, 0);
-
-		for (int i = -5; i <= 5; i++) {
-			float x = map(i, -5, 5, gap, height - gap);
-
-			text(i, x, textGap);
-			line(x , gap, x, height - gap);
-
-			text(i, textGap, x);
+		textAlign(CENTER, CENTER);
+		for(int i = -5 ; i <=5 ; i ++)
+		{
+			float x = map(i, -5, 5, gap, width -gap);
+			line(x, gap, x, height - gap);
 			line(gap, x, width - gap, x);
+			fill(255);
+			text(i, x, halfGap);
+			text(i, halfGap, x);
+
 		}
 	}
 
-	private void fillNextColor(int colorSelection) {
-		int[][] colors = {{255, 0, 0},
-			{255, 105, 0},
-			{255, 225, 53},
-			{208, 255, 20},
-			{106, 255, 77},
-			{0, 255, 0},
-			{152, 255, 152},
-			{0, 255, 255},
-			{102, 179, 255},
-			{0, 0, 255}};
 
-		fill(colors[colorSelection][0], colors[colorSelection][1], colors[colorSelection][2]);
+	public void keyPressed()
+	{
+		if (key == ' ')
+		{
+
+		}
+	}
+
+
+	public void draw()
+	{
+		background(0);
+		colorMode(HSB);
+		//loops1();
+
+		loops2();
+
+		//loops3();
 	}
 }

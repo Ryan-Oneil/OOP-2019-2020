@@ -1,0 +1,15 @@
+
+[squid:S18540"8Remove this useless assignment to local variable "mino".(л╖╠╞·    8Э┘ьёЕ.
+]squid:S1854$":Remove this useless assignment to local variable "topcat".(ж■╬¤·    8Э┘ьёЕ.
+[
+squid:S106."9Replace this use of System.out or System.err by a logger.(с╞ам·    8Э┘ьёЕ.
+[
+squid:S1066"9Replace this use of System.out or System.err by a logger.(цидЪ°    8Э┘ьёЕ.
+[
+squid:S1067"9Replace this use of System.out or System.err by a logger.(ЪЧ░Н°    8Э┘ьёЕ.
+[
+squid:S106="9Replace this use of System.out or System.err by a logger.(цидЪ°    8Э┘ьёЕ.
+[
+squid:S106>"9Replace this use of System.out or System.err by a logger.(ЪЧ░Н°    8Э┘ьёЕ.
+Nsquid:S1481$"+Remove this unused "topcat" local variable.(ж■╬¤·    8Э┘ьёЕ.
+isquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(▐ёрЁ8Э┘ьёЕ.
