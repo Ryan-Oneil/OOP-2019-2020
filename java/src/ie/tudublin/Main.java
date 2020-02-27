@@ -4,8 +4,8 @@ public class Main
 {
 
     public void helloArrays()
-	{
-		String[] a = {"MAIN"};
+    {
+        String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new ArraysExample());
     }
 
@@ -27,10 +27,28 @@ public class Main
         processing.core.PApplet.runSketch( a, new BugZap());
     }
 
+    public void sound1()
+    {
+        String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Sound1());
+    }
+
+    public void sound2()
+    {
+        String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Sound2());
+    }
+
     public void airSeaBattle()
     {
         String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new AirSeaBattle());
+    }
+
+    public void soundMandala()
+    {
+        String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new SoundMandala());
     }
 
     public void dogsCats()
@@ -75,10 +93,6 @@ public class Main
     public static void main(String[] arg)
     {
         Main main = new Main();
-<<<<<<< HEAD
-        main.loops();
-=======
-		main.helloArrays();        
->>>>>>> 809ade9f27be61a429648504e17337c6c49029aa
+        main.sound2();
     }
 }
